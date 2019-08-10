@@ -16,8 +16,16 @@ $(document).ready(function () {
         if ($('.sidenav').width() > 0) {
             $('.sidenav').css('width', '0%');
         } else {
+            function myFunction(x) {
+                if (x.matches) {
+                    $('.sidenav').css('width', '100%');
+                } else {
+                    $('.sidenav').css('width', '320px');
+                }
+            }
+            let x = window.matchMedia("(max-width: 992px)")
+            myFunction(x)
 
-            $('.sidenav').css('width', '18%');
         }
 
     })
@@ -27,59 +35,73 @@ $(document).ready(function () {
 
     });
 
-    accordion
+
+
+    // accordion
     $("#accordion > li > div").click(function () {
-
-        if (false == $(this).next().is(':visible')) {
-            $('#accordion ul').slideUp(700);
-        }
-        $(this).next().slideToggle(700);
-
-
-        // $("#accordion > li > div").click(function () {
-        //     let currentul = $(this).next();
-        //     $(currentul).toggleClass("forvisible");
-        // });
-
-       
+        $(this).toggleClass('active-about');
+        $(this).next().slideToggle('normal');
     });
-     // Navbar Scroll
-    // $(function(){
-    //     const navbar = $('.navbar');
-        
-    //     $(window).scroll(function(){
-    //         if($(window).scrollTop() <= 0){
-    //             navbar.removeClass('navbar-scroll');
-    //         } else {
-    //             navbar.addClass('navbar-scroll');
-    //             $('.navbar-scroll').css('position', 'fixed');
 
-    //         }
-    //     });
+    // $("#accordion > li > div").click(function () {
+
+    //     if (false == $(this).next().is(':visible')) {
+    //         $('#accordion ul').slideUp(700);
+    //     }
+    //     $(this).next().slideToggle(700);
     // });
+
+
+    // Scroll
+
+    let navbar = $('.navbar');
+    let win = $(window);
+    win.on('scroll', function () {
+        let scroll = win.scrollTop();
+        if (scroll < 300) {
+            navbar.removeClass("navbar-scroll");
+        } else {
+            navbar.addClass("navbar-scroll");
+        }
+    });
 
     // Slider
     $('.owl-carousel').owlCarousel({
-        loop:true,
+        loop: true,
         dots: true,
         navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
         navSpeed: 800,
         autoplay: true,
-        transitionStyle : "fade",
-        responsive:{
-            0:{
-                items:1
+        transitionStyle: "fade",
+        responsive: {
+            0: {
+                items: 1
             },
-            600:{
-                items:1
+            600: {
+                items: 1
             },
-            1000:{
-                items:1
+            1000: {
+                items: 1
             }
         }
-        
+
     })
-   
+
+    // About Accordion 
+    let headerAccordion = $('.accordion-header');
+
+    function accordion() {
+        $(this).toggleClass('active-about');
+        if (false == $(this).next().is(':visible')) {
+            $('.accordion-body').slideUp(300);
+        }
+        $(this).next().slideToggle(300);
+    }
+
+    headerAccordion.click(accordion);
+
 
 
 });
+
+

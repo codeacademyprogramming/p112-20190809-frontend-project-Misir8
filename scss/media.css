@@ -1,0 +1,20 @@
+@media (max-width: 992px)
+{ .bars
+   { -ms-flex-direction: row-reverse!important;
+    flex-direction: row-reverse!important;
+    display: flex !important;
+    justify-content: space-between;
+    width: 100%;}
+    .burger{
+        width: 100%;
+        
+    }
+    .burger::after{
+        content: "Menu";
+        color: #ff3115;
+    }
+    .burger > i{
+        background: #212121 !important;
+        color: #ff3115;
+    }
+}
