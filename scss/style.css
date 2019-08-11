@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -739,27 +740,182 @@ section#about .about-text .hr {
   background: #ff3115;
 }
 
+section#about #modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  display: none;
+  z-index: 120;
+}
+
+section#about #modal span {
+  color: white;
+  position: absolute;
+  right: 200px;
+  top: 200px;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+section#about #vidSizer {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 150vh;
+  max-width: 95%;
+}
+
+section#about #vidHolder {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+section#about #mainVid {
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 60%;
+  height: 60%;
+}
+
+section#about .about-video {
+  position: relative;
+}
+
+section#about .about-video img {
+  width: 100%;
+}
+
+section#about .about-video .about-video-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+section#about .about-video .about-video-content:before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  left: 40px;
+  bottom: 40px;
+  border-top: 5px solid #cf0909;
+  border-bottom: 5px solid #cf0909;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  opacity: 0;
+  z-index: 1;
+}
+
+section#about .about-video .about-video-content:hover:before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  opacity: 1;
+}
+
+section#about .about-video .about-video-content:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+section#about .about-video .about-video-content:after {
+  content: '';
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  left: 40px;
+  bottom: 40px;
+  border-left: 5px solid #cf0909;
+  border-right: 5px solid #cf0909;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  opacity: 0;
+  z-index: 1;
+}
+
+section#about .about-video .about-video-content:hover:after {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  opacity: 1;
+}
+
+section#about .about-video .about-video-content a {
+  color: #fff;
+  background: #ff3115;
+  width: 80px;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 99;
+}
+
+section#about .about-video .about-video-content a i {
+  font-size: 2rem;
+}
+
+section#about .accordion-title {
+  line-height: 1.6;
+}
+
+section#about .accordion-title h3 {
+  font-size: 1.5rem;
+}
+
+section#about .accordion-title p {
+  margin: 30px 0;
+  font-size: 0.9rem;
+}
+
 section#about .accordion {
   list-style: none;
-  border-top: 1px solid #ddd;
-  border-left: 1px solid #ddd;
-  border-right: 1px solid #ddd;
-  margin: .5rem 0 1rem 0;
-  padding-left: 0;
 }
 
 section#about .accordion-header {
-  background: #fff;
-  border-bottom: 1px solid #ddd;
+  background: #F3F3F3;
   cursor: pointer;
-  min-height: 3rem;
-  line-height: 3rem;
-  padding: 0 1rem;
+  padding: 15px;
+  margin: 10px 0;
 }
 
 section#about .accordion-header:after {
   font-weight: bold;
-  content: ">";
+  content: "▶";
   float: right;
 }
 
@@ -769,13 +925,12 @@ section#about .active-about {
 
 section#about .accordion-header.active-about:after {
   font-weight: bold;
-  content: "-";
+  content: "▼";
   float: right;
 }
 
 section#about .accordion-body {
   display: none;
   padding: 1rem;
-  border-bottom: 1px solid #ddd;
 }
 /*# sourceMappingURL=style.css.map */

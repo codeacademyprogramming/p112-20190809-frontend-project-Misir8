@@ -630,53 +630,181 @@ section#about {
         flex-direction: column;
         justify-content: center;
         margin-bottom: 50px;
+
         p {
             color: #838383;
             margin: 15px 0;
         }
-        .hr{
+
+        .hr {
             width: 100px;
             height: 3px;
             background: $secondary;
         }
     }
-    .accordion{
-        list-style: none;
-        border-top: 1px solid #ddd;
-        border-left: 1px solid #ddd;
-        border-right: 1px solid #ddd;
-        margin: .5rem 0 1rem 0;
-        padding-left: 0;
-    }
-    
-    .accordion-header{
-        background: #fff;
-        border-bottom: 1px solid #ddd;
+
+    #modal {
+        position: fixed;
+        left: 0; top: 0;
+        width: 100%;
+        background: rgba(0,0,0,.8);
+        height: 100%;
+        display: none;
+        z-index: 120;
+      }
+      #modal span {
+        color: white;
+        position: absolute;
+        right: 200px;
+        top: 200px;
+        font-size: 2em;
         cursor: pointer;
-        min-height: 3rem;
-        line-height: 3rem;
-        padding: 0 1rem;
+      }
+      #vidSizer {
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 150vh;
+        max-width: 95%;
+      }
+      #vidHolder {
+        position: relative;
+        height: 0;
+        padding-bottom: 56.25%;
+      }
+      #mainVid {
+        position: absolute;
+        left: 20%;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60%;
+        height: 60%;
+      }
+
+    .about-video {
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        .about-video-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s all;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 40px;
+                right: 40px;
+                left: 40px;
+                bottom: 40px;
+                border-top: 5px solid rgb(207, 9, 9);
+                border-bottom: 5px solid rgb(207, 9, 9);
+                box-sizing: border-box;
+                transition: 0.5s;
+                transform: scaleX(0);
+                opacity: 0;
+                z-index: 1;
+
+            }
+
+            &:hover:before {
+                transform: scaleX(1);
+                opacity: 1;
+            }
+
+            &:hover {
+                background: rgba(0, 0, 0, 0.3);
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 40px;
+                right: 40px;
+                left: 40px;
+                bottom: 40px;
+                border-left: 5px solid rgb(207, 9, 9);
+                border-right: 5px solid rgb(207, 9, 9);
+                box-sizing: border-box;
+                transition: 0.5s;
+                transform: scaleY(0);
+                opacity: 0;
+                z-index: 1;
+            }
+
+            &:hover:after {
+                transform: scaleY(1);
+                opacity: 1;
+            }
+
+            a {
+                color: $succes;
+                background: $secondary;
+                width: 80px;
+                height: 80px;
+                display: flex;
+                justify-content: center;
+                border-radius: 50%;
+                align-items: center;
+                z-index: 99;
+
+                i {
+                    font-size: 2rem;
+
+                }
+            }
+        }
     }
-    
-    .accordion-header:after{
+    .accordion-title{
+        line-height: 1.6;
+        h3{
+            font-size: 1.5rem;
+        }
+        p{
+            margin: 30px 0;
+            font-size: 0.9rem;
+        }
+    }
+    .accordion {
+        list-style: none;
+        
+    }
+
+    .accordion-header {
+        background: #F3F3F3;
+        cursor: pointer;
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    .accordion-header:after {
         font-weight: bold;
-        content: ">";
+        content: "▶";
         float: right;
     }
-    
-    .active-about{
-      background: red;
+
+    .active-about {
+        background: red;
     }
-    
-    .accordion-header.active-about:after{
+
+    .accordion-header.active-about:after {
         font-weight: bold;
-        content: "-";
+        content: "▼";
         float: right;
     }
-    
-    .accordion-body{
+
+    .accordion-body {
         display: none;
         padding: 1rem;
-        border-bottom: 1px solid #ddd;
     }
 }

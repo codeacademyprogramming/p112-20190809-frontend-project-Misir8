@@ -91,14 +91,42 @@ $(document).ready(function () {
     let headerAccordion = $('.accordion-header');
 
     function accordion() {
-        $(this).toggleClass('active-about');
+
         if (false == $(this).next().is(':visible')) {
             $('.accordion-body').slideUp(300);
-        }
-        $(this).next().slideToggle(300);
+            }
+            $(this).next().slideToggle(300);
+            $(this).toggleClass('active-about');
+
     }
 
     headerAccordion.click(accordion);
+
+
+
+// modal video
+
+    $(function(){
+  
+        $(".myvideo").click(function(){
+          
+          $("#modal").fadeIn(1000)
+          
+        });
+        
+        $("#modal span").click(function(){
+          
+          $("#modal").fadeOut();
+          $("#mainVid").attr("src", "")
+          
+        });
+        
+      })
+
+
+
+
+
 
 
 
