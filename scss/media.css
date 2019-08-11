@@ -11,10 +11,23 @@
     }
     .burger::after{
         content: "Menu";
-        color: #ff3115;
     }
     .burger > i{
         background: #212121 !important;
-        color: #ff3115;
+    }
+    .owl-prev{
+        display: none !important;
+    }
+    .owl-next{
+        display: none !important;
+    }
+}
+@media (max-width: 1300px)
+{ 
+    .owl-prev{
+        left: -20px !important;
+    }
+    .owl-next{
+        right: -20px !important;
     }
 }

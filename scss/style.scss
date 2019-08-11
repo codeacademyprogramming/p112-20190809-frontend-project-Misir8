@@ -1,3 +1,4 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
 @import 'variables';
 
 * {
@@ -9,6 +10,7 @@
 
 body {
     font-family: 'Roboto Condensed', sans-serif;
+    overflow-x: hidden;
 }
 
 // Utility 
@@ -26,6 +28,12 @@ ul {
 
 h2 {
     font-size: 2rem;
+}
+
+.hr {
+    width: 100px;
+    height: 3px;
+    background: $secondary;
 }
 
 // Header
@@ -620,6 +628,8 @@ section#intro {
 }
 
 section#about {
+    padding-bottom: 100px;
+
     p {
         color: #838383;
     }
@@ -636,51 +646,51 @@ section#about {
             margin: 15px 0;
         }
 
-        .hr {
-            width: 100px;
-            height: 3px;
-            background: $secondary;
-        }
     }
 
     #modal {
         position: fixed;
-        left: 0; top: 0;
+        left: 0;
+        top: 0;
         width: 100%;
-        background: rgba(0,0,0,.8);
+        background: rgba(0, 0, 0, .8);
         height: 100%;
         display: none;
         z-index: 120;
-      }
-      #modal span {
+    }
+
+    #modal span {
         color: white;
         position: absolute;
         right: 200px;
         top: 200px;
         font-size: 2em;
         cursor: pointer;
-      }
-      #vidSizer {
+    }
+
+    #vidSizer {
         position: relative;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
         width: 150vh;
         max-width: 95%;
-      }
-      #vidHolder {
+    }
+
+    #vidHolder {
         position: relative;
         height: 0;
         padding-bottom: 56.25%;
-      }
-      #mainVid {
+    }
+
+    #mainVid {
         position: absolute;
         left: 20%;
         top: 50%;
         transform: translateY(-50%);
         width: 60%;
         height: 60%;
-      }
+    }
 
     .about-video {
         position: relative;
@@ -765,26 +775,30 @@ section#about {
             }
         }
     }
-    .accordion-title{
+
+    .accordion-title {
         line-height: 1.6;
-        h3{
+
+        h3 {
             font-size: 1.5rem;
         }
-        p{
+
+        p {
             margin: 30px 0;
             font-size: 0.9rem;
         }
     }
+
     .accordion {
         list-style: none;
-        
+
     }
 
     .accordion-header {
         background: #F3F3F3;
         cursor: pointer;
         padding: 15px;
-        margin: 10px 0;
+        margin: 8px 0;
     }
 
     .accordion-header:after {
@@ -800,11 +814,145 @@ section#about {
     .accordion-header.active-about:after {
         font-weight: bold;
         content: "▼";
-        float: right;
     }
 
     .accordion-body {
         display: none;
         padding: 1rem;
+    }
+}
+
+section#popular-courses {
+    background: $muted;
+    padding: 100px 0;
+
+    .popular-courses-title {
+        text-align: center;
+        padding-bottom: 50px;
+
+        p {
+            color: #505050;
+            padding: 20px 0;
+        }
+    }
+
+    .popular-course-card {
+        &:hover .popular-item-img>.overlay-popular {
+            background: rgba(0, 0, 0, 0.5);
+            transform: scaleY(1);
+        }
+
+        .popular-item-img {
+            position: relative;
+            height: 255px;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .overlay-popular {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 255px;
+                justify-content: center;
+                transform: scaleY(0);
+                transition: 0.4s all;
+
+                a {
+                    color: $secondary;
+                    font-size: 20px;
+                    transform: rotate(180deg);
+                }
+            }
+
+            .badge {
+                position: absolute;
+                bottom: -20px;
+                right: 20px;
+                color: $succes;
+                background: $secondary;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+            }
+        }
+
+        .popular-card-body {
+            background: $succes;
+            padding: 30px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1.6;
+
+            .category {
+                color: $secondary;
+
+                &+a {
+                    color: $primary;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                }
+            }
+
+            .stars {
+                display: flex;
+                align-items: center;
+                color: #505050;
+
+                p {
+                    border-left: 1px solid #8E8E8E;
+                    padding-left: 10px;
+                }
+
+                .rating {
+                    border: none;
+                    padding-right: 10px;
+                }
+
+                .checked {
+                    color: red !important;
+                }
+
+                .fa-star {
+                    color: #f0f0f0;
+                }
+            }
+
+        }
+
+        .popular-card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: #F0F0F0;
+            padding: 15px 0;
+
+            div {
+                &:first-child {
+                    border: none;
+                }
+
+                border-left: 1px solid #8e8e88;
+                padding: 0 10px;
+            }
+
+            h5 {
+                font-size: 0.9rem;
+            }
+        }
     }
 }

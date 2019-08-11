@@ -66,7 +66,7 @@ $(document).ready(function () {
     });
 
     // Slider
-    $('.owl-carousel').owlCarousel({
+    $('.show').owlCarousel({
         loop: true,
         dots: true,
         navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
@@ -94,9 +94,9 @@ $(document).ready(function () {
 
         if (false == $(this).next().is(':visible')) {
             $('.accordion-body').slideUp(300);
-            }
-            $(this).next().slideToggle(300);
-            $(this).toggleClass('active-about');
+        }
+        $(this).next().slideToggle(300);
+        $(this).toggleClass('active-about');
 
     }
 
@@ -104,30 +104,48 @@ $(document).ready(function () {
 
 
 
-// modal video
+    // modal video
 
-    $(function(){
-  
-        $(".myvideo").click(function(){
-          
-          $("#modal").fadeIn(1000)
-          
+    $(function () {
+
+        $(".myvideo").click(function () {
+
+            $("#modal").fadeIn(1000)
+
         });
-        
-        $("#modal span").click(function(){
-          
-          $("#modal").fadeOut();
-          $("#mainVid").attr("src", "")
-          
+
+        $("#modal span").click(function () {
+
+            $("#modal").fadeOut();
+            $("#mainVid").attr("src", "")
+
         });
-        
-      })
+
+    })
 
 
 
 
 
-
+    $('.car').owlCarousel({
+        loop:true,
+        margin:10,
+        navSpeed: 1000,
+        nav:true,
+        dots: false,
+        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+        responsive:{
+            0:{
+                items:1
+            },
+            768:{
+                items:2
+            },
+            992:{
+                items:3
+            }
+        }
+    })
 
 
 });
