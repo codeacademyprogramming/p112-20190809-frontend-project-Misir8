@@ -125,11 +125,11 @@ $(document).ready(function () {
 
 
 
-
+// owl carousel
 
     $('.car').owlCarousel({
         loop:true,
-        margin:10,
+        margin:30,
         navSpeed: 1000,
         nav:true,
         dots: false,
@@ -146,6 +146,24 @@ $(document).ready(function () {
             }
         }
     })
+
+    // Counter
+
+    let counter = $('.flipCount'),
+    counterFrom = counter.data('counter-from'),
+    counterTo = counter.data('counter-to');
+  
+  $('.count').each(function() {
+    $(this).prop('Counter', 0).animate({
+      Counter: $(this).text()
+    }, {
+      duration: 2500,
+      easing: 'swing',
+      step: function(now) {
+        $(this).text(Math.ceil(now));
+      }
+    });
+  });
 
 
 });

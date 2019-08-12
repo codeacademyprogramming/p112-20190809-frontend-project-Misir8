@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+*::selection {
+    background: $secondary;
+    color: $succes
+}
 
 body {
     font-family: 'Roboto Condensed', sans-serif;
@@ -549,6 +553,7 @@ header {
     }
 }
 
+// Intro
 section#intro {
     .intro-item {
         background: $dark;
@@ -627,6 +632,7 @@ section#intro {
     }
 }
 
+// About
 section#about {
     padding-bottom: 100px;
 
@@ -822,136 +828,188 @@ section#about {
     }
 }
 
+// Popular-courses
 section#popular-courses {
     background: $muted;
     padding: 100px 0;
+}
 
-    .popular-courses-title {
-        text-align: center;
-        padding-bottom: 50px;
+.popular-courses-title {
+    text-align: center;
+    padding-bottom: 50px;
 
-        p {
-            color: #505050;
-            padding: 20px 0;
+    p {
+        color: #505050;
+        padding: 20px 0;
+    }
+}
+
+.card {
+    &:hover .card-item-img>.overlay-card {
+        background: rgba(0, 0, 0, 0.5);
+        transform: scaleY(1);
+    }
+
+    .card-item-img {
+        position: relative;
+        height: 255px;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .overlay-card {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 255px;
+            justify-content: center;
+            transform: scaleY(0);
+            transition: 0.4s all;
+
+            a {
+                color: $secondary;
+                font-size: 20px;
+                transform: rotate(180deg);
+            }
+        }
+
+        .badge {
+            position: absolute;
+            bottom: -20px;
+            right: 20px;
+            color: $succes;
+            background: $secondary;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
         }
     }
 
-    .popular-course-card {
-        &:hover .popular-item-img>.overlay-popular {
-            background: rgba(0, 0, 0, 0.5);
-            transform: scaleY(1);
-        }
+    .card-body {
+        background: $succes;
+        padding: 30px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1.6;
 
-        .popular-item-img {
-            position: relative;
-            height: 255px;
+        .category {
+            color: $secondary;
 
-            img {
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-            }
-
-            .overlay-popular {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                height: 255px;
-                justify-content: center;
-                transform: scaleY(0);
-                transition: 0.4s all;
-
-                a {
-                    color: $secondary;
-                    font-size: 20px;
-                    transform: rotate(180deg);
-                }
-            }
-
-            .badge {
-                position: absolute;
-                bottom: -20px;
-                right: 20px;
-                color: $succes;
-                background: $secondary;
-                border-radius: 50%;
-                width: 50px;
-                height: 50px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+            &+a {
+                color: $primary;
+                font-size: 1.2rem;
                 font-weight: bold;
             }
         }
 
-        .popular-card-body {
-            background: $succes;
-            padding: 30px;
-            text-align: center;
+        .stars {
             display: flex;
-            flex-direction: column;
             align-items: center;
-            line-height: 1.6;
+            color: #505050;
 
-            .category {
-                color: $secondary;
-
-                &+a {
-                    color: $primary;
-                    font-size: 1.2rem;
-                    font-weight: bold;
-                }
+            p {
+                border-left: 1px solid #8E8E8E;
+                padding-left: 10px;
             }
 
-            .stars {
-                display: flex;
-                align-items: center;
-                color: #505050;
-
-                p {
-                    border-left: 1px solid #8E8E8E;
-                    padding-left: 10px;
-                }
-
-                .rating {
-                    border: none;
-                    padding-right: 10px;
-                }
-
-                .checked {
-                    color: red !important;
-                }
-
-                .fa-star {
-                    color: #f0f0f0;
-                }
+            .rating {
+                border: none;
+                padding-right: 10px;
             }
 
+            .checked {
+                color: red !important;
+            }
+
+            .fa-star {
+                color: #f0f0f0;
+            }
         }
 
-        .popular-card-footer {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: #F0F0F0;
-            padding: 15px 0;
+    }
 
-            div {
-                &:first-child {
-                    border: none;
-                }
+    .card-footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: #F0F0F0;
+        padding: 15px 0;
 
-                border-left: 1px solid #8e8e88;
-                padding: 0 10px;
+        div {
+            &:first-child {
+                border: none;
             }
 
-            h5 {
-                font-size: 0.9rem;
+            border-left: 1px solid #8e8e88;
+            padding: 0 10px;
+        }
+
+        h5 {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+// Achheivments
+
+section#acheivements {
+    background-image: url('../img/counter-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: $succes;
+    padding: 100px 0;
+    line-height: 1.6;
+
+    .acheiv-title {
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            color: #929B92;
+            padding: 20px 0 35px 0;
+        }
+    }
+
+    .acheiv-img {
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+
+    .counter {
+        margin-top: 70px;
+
+        .counter-item {
+            border: 1px solid #393738;
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px 0;
+            line-height: 1.4;
+
+            .count {
+                font-size: 4rem;
+                font-weight: bold;
+            }
+
+            .count-footer {
+                font-size: 1.2rem;
             }
         }
     }

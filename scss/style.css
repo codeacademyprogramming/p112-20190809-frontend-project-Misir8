@@ -7,8 +7,19 @@
           box-sizing: border-box;
 }
 
+*::-moz-selection {
+  background: #ff3115;
+  color: #fff;
+}
+
+*::selection {
+  background: #ff3115;
+  color: #fff;
+}
+
 body {
   font-family: 'Roboto Condensed', sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -943,35 +954,35 @@ section#popular-courses {
   padding: 100px 0;
 }
 
-section#popular-courses .popular-courses-title {
+.popular-courses-title {
   text-align: center;
   padding-bottom: 50px;
 }
 
-section#popular-courses .popular-courses-title p {
+.popular-courses-title p {
   color: #505050;
   padding: 20px 0;
 }
 
-section#popular-courses .popular-course-card:hover .popular-item-img > .overlay-popular {
+.card:hover .card-item-img > .overlay-card {
   background: rgba(0, 0, 0, 0.5);
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
 }
 
-section#popular-courses .popular-course-card .popular-item-img {
+.card .card-item-img {
   position: relative;
   height: 255px;
 }
 
-section#popular-courses .popular-course-card .popular-item-img img {
+.card .card-item-img img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-section#popular-courses .popular-course-card .popular-item-img .overlay-popular {
+.card .card-item-img .overlay-card {
   position: absolute;
   top: 0;
   left: 0;
@@ -996,14 +1007,14 @@ section#popular-courses .popular-course-card .popular-item-img .overlay-popular 
   transition: 0.4s all;
 }
 
-section#popular-courses .popular-course-card .popular-item-img .overlay-popular a {
+.card .card-item-img .overlay-card a {
   color: #ff3115;
   font-size: 20px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-section#popular-courses .popular-course-card .popular-item-img .badge {
+.card .card-item-img .badge {
   position: absolute;
   bottom: -20px;
   right: 20px;
@@ -1024,7 +1035,7 @@ section#popular-courses .popular-course-card .popular-item-img .badge {
   font-weight: bold;
 }
 
-section#popular-courses .popular-course-card .popular-card-body {
+.card .card-body {
   background: #fff;
   padding: 30px;
   text-align: center;
@@ -1041,17 +1052,17 @@ section#popular-courses .popular-course-card .popular-card-body {
   line-height: 1.6;
 }
 
-section#popular-courses .popular-course-card .popular-card-body .category {
+.card .card-body .category {
   color: #ff3115;
 }
 
-section#popular-courses .popular-course-card .popular-card-body .category + a {
+.card .card-body .category + a {
   color: #111;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-section#popular-courses .popular-course-card .popular-card-body .stars {
+.card .card-body .stars {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1061,25 +1072,25 @@ section#popular-courses .popular-course-card .popular-card-body .stars {
   color: #505050;
 }
 
-section#popular-courses .popular-course-card .popular-card-body .stars p {
+.card .card-body .stars p {
   border-left: 1px solid #8E8E8E;
   padding-left: 10px;
 }
 
-section#popular-courses .popular-course-card .popular-card-body .stars .rating {
+.card .card-body .stars .rating {
   border: none;
   padding-right: 10px;
 }
 
-section#popular-courses .popular-course-card .popular-card-body .stars .checked {
+.card .card-body .stars .checked {
   color: red !important;
 }
 
-section#popular-courses .popular-course-card .popular-card-body .stars .fa-star {
+.card .card-body .stars .fa-star {
   color: #f0f0f0;
 }
 
-section#popular-courses .popular-course-card .popular-card-footer {
+.card .card-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1094,16 +1105,61 @@ section#popular-courses .popular-course-card .popular-card-footer {
   padding: 15px 0;
 }
 
-section#popular-courses .popular-course-card .popular-card-footer div {
+.card .card-footer div {
   border-left: 1px solid #8e8e88;
   padding: 0 10px;
 }
 
-section#popular-courses .popular-course-card .popular-card-footer div:first-child {
+.card .card-footer div:first-child {
   border: none;
 }
 
-section#popular-courses .popular-course-card .popular-card-footer h5 {
+.card .card-footer h5 {
   font-size: 0.9rem;
+}
+
+section#acheivements {
+  background-image: url("../img/counter-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+  padding: 100px 0;
+  line-height: 1.6;
+}
+
+section#acheivements .acheiv-title h2 {
+  font-size: 1.8rem;
+}
+
+section#acheivements .acheiv-title p {
+  color: #929B92;
+  padding: 20px 0 35px 0;
+}
+
+section#acheivements .acheiv-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+section#acheivements .counter {
+  margin-top: 70px;
+}
+
+section#acheivements .counter .counter-item {
+  border: 1px solid #393738;
+  text-align: center;
+  margin: 20px 0;
+  padding: 15px 0;
+  line-height: 1.4;
+}
+
+section#acheivements .counter .counter-item .count {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+section#acheivements .counter .counter-item .count-footer {
+  font-size: 1.2rem;
 }
 /*# sourceMappingURL=style.css.map */
