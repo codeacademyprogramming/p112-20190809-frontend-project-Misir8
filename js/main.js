@@ -69,7 +69,8 @@ $(document).ready(function () {
     $('.show').owlCarousel({
         loop: true,
         dots: true,
-        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+        nav: false,
+        // navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
         navSpeed: 800,
         autoplay: true,
         transitionStyle: "fade",
