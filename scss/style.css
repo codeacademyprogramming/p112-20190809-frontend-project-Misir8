@@ -937,6 +937,7 @@ section#about .accordion-header:after {
 
 section#about .active-about {
   background: red;
+  color: #fff;
 }
 
 section#about .accordion-header.active-about:after {
@@ -1152,6 +1153,12 @@ section#acheivements .counter .counter-item {
   margin: 20px 0;
   padding: 15px 0;
   line-height: 1.4;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
+}
+
+section#acheivements .counter .counter-item:hover {
+  border: 1px solid #ff3115;
 }
 
 section#acheivements .counter .counter-item .count {
@@ -1161,5 +1168,60 @@ section#acheivements .counter .counter-item .count {
 
 section#acheivements .counter .counter-item .count-footer {
   font-size: 1.2rem;
+}
+
+section#our-upcoming-events {
+  padding: 100px 0;
+}
+
+section#our-upcoming-events .card-body {
+  background: #F9F9F9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 15px;
+}
+
+section#our-upcoming-events .card-body .years-event {
+  font-size: .9rem;
+}
+
+section#our-upcoming-events .card-body .years-event i {
+  color: #ff3115;
+}
+
+section#our-upcoming-events .card-body .years-event span {
+  color: #6b6b6b;
+}
+
+section#our-upcoming-events .card-body .event-card-body-title a {
+  font-size: 1.2rem;
+  color: #111;
+  font-weight: bold;
+}
+
+section#our-upcoming-events .card-body .time-place {
+  font-size: 0.9rem;
+  padding: 5px 0 20px 0;
+}
+
+section#our-upcoming-events .card-body .time-place i {
+  color: #ff3115;
+  display: inline-block;
+}
+
+section#our-upcoming-events .card-body .time-place .fa-map-marker-alt {
+  padding-left: 10px;
+}
+
+section#our-upcoming-events .card-body .time-place span {
+  color: #6b6b6b;
+}
+
+section#our-upcoming-events .card-body div:last-child a {
+  color: #ff3115;
 }
 /*# sourceMappingURL=style.css.map */

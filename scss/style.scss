@@ -815,6 +815,7 @@ section#about {
 
     .active-about {
         background: red;
+        color: $succes;
     }
 
     .accordion-header.active-about:after {
@@ -1002,6 +1003,10 @@ section#acheivements {
             margin: 20px 0;
             padding: 15px 0;
             line-height: 1.4;
+            transition: 0.3s all;
+            &:hover{
+                border: 1px solid $secondary;
+            }
 
             .count {
                 font-size: 4rem;
@@ -1013,4 +1018,50 @@ section#acheivements {
             }
         }
     }
+}
+
+// Our-upcoming-events
+
+section#our-upcoming-events{
+    padding: 100px 0;
+    .card-body{
+        background: #F9F9F9;
+        display: flex;
+        align-items: flex-start;
+        padding: 15px;
+        .years-event{
+            font-size: .9rem;
+            i{
+                color: $secondary;
+            }
+            span{
+               color: rgb(107, 107, 107);
+            }
+        }
+        .event-card-body-title{
+            a{
+                font-size: 1.2rem;
+                color: $primary;
+                font-weight: bold;
+            }
+        }
+        .time-place{
+            font-size: 0.9rem;
+            padding: 5px 0 20px 0;
+            i{
+                color: $secondary;
+                display: inline-block;
+            }
+            .fa-map-marker-alt{
+                padding-left: 10px;
+            }
+            span{
+                color: rgb(107, 107, 107);
+            }
+        }
+        div:last-child a{
+            color: $secondary;
+        }
+    }
+    
 }
