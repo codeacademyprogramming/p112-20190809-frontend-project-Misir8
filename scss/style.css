@@ -302,26 +302,26 @@ header .navbar .navbars .bars .seacrh i {
   background: #ff3115;
   padding: 22px 15px;
   font-size: 15px;
-  cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 header .navbar .navbars .bars .seacrh i:hover {
   background: #E41F05;
+  cursor: pointer;
 }
 
 header .navbar .navbars .bars .bg-icon {
   background: #E41F05;
   padding: 20.5px 15px;
   font-size: 18px;
-  cursor: pointer;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 header .navbar .navbars .bars .bg-icon:hover {
   background: #ff3115;
+  cursor: pointer;
 }
 
 header .navbar .navbars .bars .search-modal {
@@ -365,10 +365,18 @@ header .navbar .navbars .bars .search-modal .close {
       -ms-flex-pack: center;
           justify-content: center;
   font-weight: bold;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+  margin-right: 20px;
+}
+
+header .navbar .navbars .bars .search-modal .close:hover {
+  background: #ff3115;
+  cursor: pointer;
 }
 
 header .navbar .navbars .bars .search-modal .close span {
-  cursor: default;
+  cursor: pointer;
 }
 
 header .navbar .navbars .bars .search-modal .search-top {
@@ -460,13 +468,14 @@ header .navbar .navbars .bars .sidenav .close-sidenav div {
       -ms-flex-pack: center;
           justify-content: center;
   font-weight: bold;
-  cursor: default;
+  cursor: pointer;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
 }
 
 header .navbar .navbars .bars .sidenav .close-sidenav div:hover {
   background: #E41F05;
+  border-color: #E41F05;
 }
 
 header .navbar .navbars .bars .sidenav .acc-menu {
@@ -724,7 +733,7 @@ section#intro .intro-item .intro-icon {
           transform: translateX(-50%);
   font-size: 2.5rem;
   background: #212121;
-  width: 50%;
+  width: 140px;
   border-radius: 100px 100px 0 0;
   padding: 30px 0 0 0;
   color: #ff3115;
@@ -1373,10 +1382,12 @@ section#our-expreince .card-ex .overlay-card-ex:before {
   border-bottom: 5px solid #cf0909;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  -webkit-transform: scaleX(0.5);
-          transform: scaleX(0.5);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
   opacity: 0;
   z-index: 10;
+  -webkit-transition: .5s all;
+  transition: .5s all;
 }
 
 section#our-expreince .card-ex .overlay-card-ex:hover:before {
@@ -1396,10 +1407,12 @@ section#our-expreince .card-ex .overlay-card-ex:after {
   border-right: 5px solid #cf0909;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  -webkit-transform: scaleY(0.5);
-          transform: scaleY(0.5);
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
   opacity: 0;
   z-index: 10;
+  -webkit-transition: .5s all;
+  transition: .5s all;
 }
 
 section#our-expreince .card-ex .overlay-card-ex:hover:after {
@@ -1546,5 +1559,14 @@ section#latest-news .news-media .dataTime {
 section#latest-news .news-media .dataTime i {
   color: #ff3115;
   padding-right: 5px;
+}
+
+section#our-products {
+  background: #f9f9f9;
+  padding: 100px 0;
+}
+
+section#our-products .card-body {
+  background: #fff;
 }
 /*# sourceMappingURL=style.css.map */

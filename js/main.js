@@ -1,12 +1,14 @@
 $(document).ready(function () {
     const modalSearch = $('.search-modal');
     const searchIcon = $('.header-search');
-    const closeSearch = $('.close-search');
+    const closeSearch = $('.close');
 
     searchIcon.on('click', () => {
         modalSearch.css("display", "block");
         $('.searching').css('transform', 'translateY(0px)');
+        
     })
+
     closeSearch.on('click', () => {
         modalSearch.css("display", "none");
     })
@@ -23,7 +25,7 @@ $(document).ready(function () {
                     $('.sidenav').css('width', '320px');
                 }
             }
-            let x = window.matchMedia("(max-width: 992px)")
+            let x = window.matchMedia("(max-width: 991px)")
             myFunction(x)
 
         }
@@ -126,24 +128,24 @@ $(document).ready(function () {
 
 
 
-// owl carousel
+    // owl carousel
 
     $('.car').owlCarousel({
-        loop:true,
-        margin:30,
+        loop: true,
+        margin: 30,
         navSpeed: 1000,
-        nav:true,
+        nav: true,
         dots: false,
         navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
-        responsive:{
-            0:{
-                items:1
+        responsive: {
+            0: {
+                items: 1
             },
-            768:{
-                items:2
+            768: {
+                items: 2
             },
-            992:{
-                items:3
+            992: {
+                items: 3
             }
         }
     })
@@ -151,20 +153,43 @@ $(document).ready(function () {
     // Counter
 
     let counter = $('.flipCount'),
-    counterFrom = counter.data('counter-from'),
-    counterTo = counter.data('counter-to');
-  
-  $('.count').each(function() {
-    $(this).prop('Counter', 0).animate({
-      Counter: $(this).text()
-    }, {
-      duration: 2500,
-      easing: 'swing',
-      step: function(now) {
-        $(this).text(Math.ceil(now));
-      }
+        counterFrom = counter.data('counter-from'),
+        counterTo = counter.data('counter-to');
+
+    $('.count').each(function () {
+        $(this).prop('Counter', 0).animate({
+            Counter: $(this).text()
+        }, {
+                duration: 2500,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
     });
-  });
+
+
+    // owl carousel
+
+    $('.card-product').owlCarousel({
+        loop: true,
+        margin: 30,
+        navSpeed: 1000,
+        nav: true,
+        dots: false,
+        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 2
+            },
+            992: {
+                items: 4
+            }
+        }
+    })
 
 
 });

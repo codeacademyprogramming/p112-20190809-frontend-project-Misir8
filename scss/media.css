@@ -26,6 +26,25 @@
     .owl-next {
         display: none !important
     }
+    #intro{
+        margin-top: 100px !important;
+    }
+    #intro .intro-item{
+        margin-top: 50px;
+    }
+    .welcome{
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    .top-social{
+        justify-content: center !important;
+    }
+    header .showcase-slider .showcase-content h1 {
+        font-size: 2rem !important;
+    }
+    header .showcase-slider .showcase-content p {
+        font-size: 0.8rem !important;
+    }
 }
 
 @media (max-width:1300px) {
@@ -42,5 +61,15 @@
     .container {
         max-width: 1110px;
         padding: 0
+    }
+}
+/* @media (max-width:768px) {
+    .intro-icon {
+        width: 30% !important;
+    }
+} */
+@media (max-width:480px) {
+    header .showcase-slider .showcase-content p {
+        display: none!important;
     }
 }
