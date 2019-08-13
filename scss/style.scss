@@ -1375,6 +1375,7 @@ section#latest-news {
 section#our-products {
     background: $muted;
     padding-top: 100px;
+
     .card-pro {
         margin-bottom: 100px;
         transition: 0.4s all;
@@ -1426,7 +1427,117 @@ section#our-products {
             }
         }
     }
+
+    button {
+        top: 42%;
+    }
+}
+
+// Testimonial
+section#testimonial {
+    background-image: url('../img/testimonial-bg.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+
+    .testimonial-title {
+        color: $succes;
+
+        p {
+            color: $succes;
+        }
+    }
+
+    .card-testimonial {
+        position: relative;
+        background: $succes;
+        padding:65px 30px;
+        margin-top: 60px;
+
+        .card-testimonial-img {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            position: absolute;
+            top: -60px;
+            left: 0;
+            width: 100%;
+            img {
+                border: 5px solid $succes;
+                width: 110px;
+                height: 110px;
+                border-radius: 50%;
+            }
+        }
+
+        .card-body {
+            line-height: 1.6;
+            padding-top: 10px;
+            h4{
+                font-size: 1.2rem;
+            }
+            &:before{
+                content: "\f10d";
+                position: absolute;
+                top: 25px;
+                left: 30px;
+                font-size: 1.5rem;
+                color: $secondary;
+                font-family: FontAwesome;
+            }
+            &:after{
+                content: "\f10e";
+                position: absolute;
+                bottom: 20px;
+                right: 30px;
+                font-size: 1.5rem;
+                color: $secondary;
+                font-family: FontAwesome;
+            }
+        }
+    }
     button{
-       top: 42%;
+        top: 60%;
+    }
+    .owl-dots{
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 50%;
+        bottom: -200px !important;
+        transform: translateX(-50%);
+        .active{
+            outline: none !important;
+        }
+        button{
+            &:first-child span{
+                border-radius: 25% 0 0 25%
+            }
+            &:last-child span{
+                border-radius: 0 25%  25% 0;
+            }
+            span{
+                width: 25px;
+                height: 6px;
+                
+            }
+        }
+
+    }
+
+}
+// Partner
+section#partner{
+    padding: 100px;
+    img{
+        width: 150px;
+        height: 100%;
+        object-fit: cover;
+    }
+    button{
+        display: none;
     }
 }

@@ -1632,4 +1632,131 @@ section#our-products .card-body .btn:hover {
 section#our-products button {
   top: 42%;
 }
+
+section#testimonial {
+  background-image: url("../img/testimonial-bg.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+}
+
+section#testimonial .testimonial-title {
+  color: #fff;
+}
+
+section#testimonial .testimonial-title p {
+  color: #fff;
+}
+
+section#testimonial .card-testimonial {
+  position: relative;
+  background: #fff;
+  padding: 65px 30px;
+  margin-top: 60px;
+}
+
+section#testimonial .card-testimonial .card-testimonial-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10;
+  position: absolute;
+  top: -60px;
+  left: 0;
+  width: 100%;
+}
+
+section#testimonial .card-testimonial .card-testimonial-img img {
+  border: 5px solid #fff;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}
+
+section#testimonial .card-testimonial .card-body {
+  line-height: 1.6;
+  padding-top: 10px;
+}
+
+section#testimonial .card-testimonial .card-body h4 {
+  font-size: 1.2rem;
+}
+
+section#testimonial .card-testimonial .card-body:before {
+  content: "\f10d";
+  position: absolute;
+  top: 25px;
+  left: 30px;
+  font-size: 1.5rem;
+  color: #ff3115;
+  font-family: FontAwesome;
+}
+
+section#testimonial .card-testimonial .card-body:after {
+  content: "\f10e";
+  position: absolute;
+  bottom: 20px;
+  right: 30px;
+  font-size: 1.5rem;
+  color: #ff3115;
+  font-family: FontAwesome;
+}
+
+section#testimonial button {
+  top: 60%;
+}
+
+section#testimonial .owl-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  left: 50%;
+  bottom: -200px !important;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+section#testimonial .owl-dots .active {
+  outline: none !important;
+}
+
+section#testimonial .owl-dots button:first-child span {
+  border-radius: 25% 0 0 25%;
+}
+
+section#testimonial .owl-dots button:last-child span {
+  border-radius: 0 25%  25% 0;
+}
+
+section#testimonial .owl-dots button span {
+  width: 25px;
+  height: 6px;
+}
+
+section#partner {
+  padding: 100px;
+}
+
+section#partner img {
+  width: 150px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section#partner button {
+  display: none;
+}
 /*# sourceMappingURL=style.css.map */

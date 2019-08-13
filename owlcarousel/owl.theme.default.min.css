@@ -45,18 +45,9 @@
     transition: 0.5s all;
 } 
 
-/* .owl-theme .owl-nav .disabled {
-    opacity: .5;
-    cursor: default
-}
-
-.owl-theme .owl-nav.disabled+.owl-dots {
-    margin-top: 10px
-} */
 
 .owl-theme .owl-dots .owl-dot {
     display: flex;
-    /* zoom: 1 */
     justify-content: flex-end;
 }
 

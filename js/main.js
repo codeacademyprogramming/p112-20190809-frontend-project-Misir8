@@ -195,6 +195,7 @@ $(document).ready(function () {
         margin: 30,
         dots: true,
         nav: false,
+        navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
         navSpeed: 1500,
         autoplay: true,
         transitionStyle: "fade",
@@ -207,6 +208,27 @@ $(document).ready(function () {
             },
             992: {
                 items: 2
+            }
+        }
+
+    })
+    $('.partners').owlCarousel({
+        loop: true,
+        margin: 30,
+        dots: false,
+        nav: false,
+        navSpeed: 1200,
+        autoplay: true,
+        transitionStyle: "fade",
+        responsive: {
+            0: {
+                items: 2
+            },
+            768: {
+                items: 4
+            },
+            992: {
+                items: 5
             }
         }
 
