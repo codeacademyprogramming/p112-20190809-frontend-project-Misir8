@@ -1241,11 +1241,21 @@ section#our-expreince {
 section#our-expreince .card-ex {
   position: relative;
   overflow: hidden;
-  height: 400px;
+  min-height: 400px;
+}
+
+section#our-expreince .card-ex:hover .overlay-card-ex {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 section#our-expreince .card-ex:hover .img-text {
   display: none;
+}
+
+section#our-expreince .card-ex .card-item-img {
+  position: relative;
 }
 
 section#our-expreince .card-ex .card-item-img img {
@@ -1291,6 +1301,65 @@ section#our-expreince .card-ex .overlay-card-ex {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 20px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transform: translateY(30px);
+          transform: translateY(30px);
+  opacity: 0;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+}
+
+section#our-expreince .card-ex .overlay-card-ex .hr {
+  width: 60px;
+  margin: 10px 0 20px;
+}
+
+section#our-expreince .card-ex .overlay-card-ex p {
+  padding-bottom: 20px;
+}
+
+section#our-expreince .card-ex .overlay-card-ex .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#our-expreince .card-ex .overlay-card-ex .icons a {
+  color: #fff;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #ff3115;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 5px;
+  z-index: 20;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+}
+
+section#our-expreince .card-ex .overlay-card-ex .icons a:hover {
+  background: #e41f05;
+}
+
+section#our-expreince .card-ex .overlay-card-ex .icons a i {
+  font-size: 1rem;
 }
 
 section#our-expreince .card-ex .overlay-card-ex:before {
@@ -1337,5 +1406,145 @@ section#our-expreince .card-ex .overlay-card-ex:hover:after {
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
   opacity: 1;
+}
+
+section#design-development {
+  background-image: url("../img/cta-bg.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0 60px;
+  color: #fff;
+}
+
+section#design-development p {
+  color: #fff;
+}
+
+section#design-development a {
+  display: inline-block;
+  color: #fff;
+  background: #ff3115;
+  margin-top: 50px;
+  padding: 0.8rem 3.2rem;
+}
+
+section#latest-news {
+  padding: 100px 0;
+}
+
+section#latest-news .news {
+  padding: 15px;
+  border: 1px solid rgba(34, 34, 34, 0.1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+section#latest-news .news:hover {
+  -webkit-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+section#latest-news .news .news-img img {
+  width: 100%;
+}
+
+section#latest-news .news .news-card-body .dataTime {
+  padding: 15px 0;
+}
+
+section#latest-news .news .news-card-body .dataTime i {
+  color: #ff3115;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+section#latest-news .news .news-card-body .title {
+  display: block;
+  color: #111;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-bottom: 15px;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+}
+
+section#latest-news .news .news-card-body .title:hover {
+  color: #ff3115;
+}
+
+section#latest-news .news .news-card-body p {
+  color: #505050;
+}
+
+section#latest-news .news .news-card-body .btn {
+  color: #fff;
+  padding: 0.5rem 1rem;
+  background: #ff3115;
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-top: 20px;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+}
+
+section#latest-news .news .news-card-body .btn:hover {
+  background: #e41f05;
+}
+
+section#latest-news .news-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+  border: 1px solid rgba(34, 34, 34, 0.1);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+section#latest-news .news-media:hover {
+  -webkit-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+section#latest-news .news-media .news-img {
+  width: 250px;
+  height: 115px;
+  padding-right: 15px;
+}
+
+section#latest-news .news-media .news-img img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section#latest-news .news-media a {
+  color: #111;
+  padding-bottom: 5px;
+  display: inline-block;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+  font-weight: bold;
+}
+
+section#latest-news .news-media a:hover {
+  color: #ff3115;
+}
+
+section#latest-news .news-media .dataTime {
+  padding-bottom: 10px;
+}
+
+section#latest-news .news-media .dataTime i {
+  color: #ff3115;
+  padding-right: 5px;
 }
 /*# sourceMappingURL=style.css.map */
