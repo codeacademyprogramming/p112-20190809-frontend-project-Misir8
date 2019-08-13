@@ -72,7 +72,6 @@ $(document).ready(function () {
         loop: true,
         dots: true,
         nav: false,
-        // navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
         navSpeed: 800,
         autoplay: true,
         transitionStyle: "fade",
@@ -80,10 +79,10 @@ $(document).ready(function () {
             0: {
                 items: 1
             },
-            600: {
+            768: {
                 items: 1
             },
-            1000: {
+            992: {
                 items: 1
             }
         }
@@ -175,6 +174,7 @@ $(document).ready(function () {
         loop: true,
         margin: 30,
         navSpeed: 1000,
+        transitionStyle: "fade",
         nav: true,
         dots: false,
         navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
@@ -189,6 +189,27 @@ $(document).ready(function () {
                 items: 4
             }
         }
+    })
+    $('.testimonials').owlCarousel({
+        loop: true,
+        margin: 30,
+        dots: true,
+        nav: false,
+        navSpeed: 1500,
+        autoplay: true,
+        transitionStyle: "fade",
+        responsive: {
+            0: {
+                items: 1
+            },
+            768: {
+                items: 1
+            },
+            992: {
+                items: 2
+            }
+        }
+
     })
 
 

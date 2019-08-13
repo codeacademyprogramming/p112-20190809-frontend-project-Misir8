@@ -1563,10 +1563,73 @@ section#latest-news .news-media .dataTime i {
 
 section#our-products {
   background: #f9f9f9;
-  padding: 100px 0;
+  padding-top: 100px;
+}
+
+section#our-products .card-pro {
+  margin-bottom: 100px;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+}
+
+section#our-products .card-pro:hover {
+  -webkit-box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+section#our-products .card-item-img {
+  overflow: hidden;
+}
+
+section#our-products .card-item-img img {
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+}
+
+section#our-products .card-item-img img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 section#our-products .card-body {
   background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section#our-products .card-body .product-title {
+  color: #111;
+  font-weight: bold;
+  font-size: 1.2rem;
+  display: inline-block;
+  padding: 20px 0 10px;
+}
+
+section#our-products .card-body .btn {
+  border: 1px solid #111;
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  color: #111;
+  margin: 20px 0;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+}
+
+section#our-products .card-body .btn:hover {
+  background: #ff3115;
+  color: #fff;
+  border: transparent;
+}
+
+section#our-products button {
+  top: 42%;
 }
 /*# sourceMappingURL=style.css.map */

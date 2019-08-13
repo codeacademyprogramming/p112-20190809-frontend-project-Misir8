@@ -320,10 +320,12 @@ header {
                         font-weight: bold;
                         transition: 0.4s all;
                         margin-right: 20px;
-                        &:hover{
-                            background:$secondary;
+
+                        &:hover {
+                            background: $secondary;
                             cursor: pointer;
                         }
+
                         span {
                             cursor: pointer;
                         }
@@ -1372,9 +1374,59 @@ section#latest-news {
 // Products 
 section#our-products {
     background: $muted;
-    padding: 100px 0;
+    padding-top: 100px;
+    .card-pro {
+        margin-bottom: 100px;
+        transition: 0.4s all;
+
+        &:hover {
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .card-item-img {
+        overflow: hidden;
+
+        img {
+            transition: 0.4s all;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
 
     .card-body {
         background: $succes;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .product-title {
+            color: $primary;
+            font-weight: bold;
+            font-size: 1.2rem;
+            display: inline-block;
+            ;
+            padding: 20px 0 10px;
+        }
+
+        .btn {
+            border: 1px solid $primary;
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            color: $primary;
+            margin: 20px 0;
+            transition: 0.4s all;
+
+            &:hover {
+                background: $secondary;
+                color: $succes;
+                border: transparent;
+            }
+        }
+    }
+    button{
+       top: 42%;
     }
 }
