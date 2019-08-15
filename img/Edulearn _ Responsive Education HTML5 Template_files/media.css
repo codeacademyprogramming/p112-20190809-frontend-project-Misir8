@@ -51,7 +51,6 @@
     header .showcase-slider .showcase-content p {
         font-size: .8rem !important
     }
-    
 }
 
 @media (max-width:1300px) {
@@ -91,13 +90,7 @@
     .last-border::before {
         display: none
     }
-    .contact{
-        position: static !important;
-        width: 100% !important;
-    }
-    .contacts{
-        background: #212121;
-    }
+
 }
 
 @media (max-width:576px) {

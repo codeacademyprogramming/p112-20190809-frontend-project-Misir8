@@ -98,7 +98,7 @@ $(document).ready(function () {
 
     })
 
-
+    
     // About Accordion 
     let headerAccordion = $('.accordion-header');
 
@@ -229,8 +229,6 @@ $(document).ready(function () {
         margin: 30,
         dots: false,
         nav: false,
-        smartSpeed: 3000,
-        // autoplayTimeout:2000,
         navSpeed: 1200,
         autoplay: true,
         transitionStyle: "fade",
@@ -247,25 +245,6 @@ $(document).ready(function () {
         }
 
     })
-
-
-
-
-    // srollup
-
-
-    jQuery(function ($) {
-
-
-        $('.scrollup').click(function () { $.scrollTo($('body'), 1000); });
-    }
-    );
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 300) $('.scrollup').fadeIn();
-        else $('.scrollup').fadeOut();
-    }
-    );
-
 
 
 });
