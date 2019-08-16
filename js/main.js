@@ -162,6 +162,37 @@ $(document).ready(function () {
     })
 
     // Counter
+    $(function(){
+        $(window).scroll(function(){
+          var aTop = 2300;
+          if($(this).scrollTop()>=aTop){
+              $('.count').each(function() {
+        var $this = $(this),
+            countTo = $this.attr('data-count');
+        
+        $({ countNum: $this.text()}).animate({
+          countNum: countTo
+        },
+      
+        {
+      
+          duration: 1000,
+          easing:'linear',
+          step: function() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function() {
+            $this.text(this.countNum);
+          }
+      
+        });  
+        
+        
+      
+      });
+          }
+        });
+      });
 
     let counter = $('.flipCount'),
         counterFrom = counter.data('counter-from'),
