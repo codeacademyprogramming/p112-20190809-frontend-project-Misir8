@@ -100,23 +100,14 @@ $(document).ready(function () {
 
 
     // About Accordion 
-    let headerAccordion = $('.accordion-header');
+    $('.accordion').accordion({
+        active: true,
+        collapsible: true,
+        heightStyle: 'content',
+        header: '> .accordion-item > .accordion-header'
+    });
 
-    function accordion() {
-
-        if (false == $(this).next().is(':visible')) {
-            $('.accordion-body').slideUp(300);
-        }
-        $(this).next().slideToggle(300);
-        $(this).toggleClass('active-about');
-
-    }
-
-    headerAccordion.click(accordion);
-
-
-
-
+    
 
     // modal video
 
@@ -302,3 +293,5 @@ $(document).ready(function () {
 });
 
 
+// preloader
+$('#before-load').find('i').fadeOut(4000).end().delay(4000).fadeOut('slow');

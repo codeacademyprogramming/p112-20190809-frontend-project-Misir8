@@ -937,38 +937,46 @@ section#about .accordion-title p {
   font-size: 0.9rem;
 }
 
-section#about .accordion {
-  list-style: none;
+section#about .accordion .accordion-item {
+  margin: 0 0 10px 0;
 }
 
-section#about .accordion-header {
+section#about .accordion .ui-accordion-header {
+  padding: 15px;
   background: #F3F3F3;
   cursor: pointer;
-  padding: 15px;
-  margin: 8px 0;
+  outline: none;
+  position: relative;
 }
 
-section#about .accordion-header:after {
-  font-weight: bold;
-  content: "\f0da";
+section#about .accordion .ui-accordion-header::after {
+  content: '\f0da';
+  position: absolute;
+  right: 20px;
   font-family: fontAwesome;
-  float: right;
+  font-size: 1.2rem;
 }
 
-section#about .active-about {
+section#about .accordion .ui-accordion-header-active {
   background: red;
   color: #fff;
 }
 
-section#about .accordion-header.active-about:after {
-  font-weight: bold;
+section#about .accordion .ui-accordion-header-active:after {
   content: "\f0dd";
   font-family: fontAwesome;
+  position: absolute;
+  right: 20px;
 }
 
-section#about .accordion-body {
-  display: none;
-  padding: 1rem;
+section#about .accordion .ui-accordion-content {
+  padding: 10px;
+}
+
+section#about .accordion p {
+  color: #111;
+  line-height: 1.48;
+  padding: 0 20px;
 }
 
 section#popular-courses {
@@ -2277,5 +2285,107 @@ footer .footer-bottom P a:hover {
 
 .btn-view .btn-product:hover {
   background: #b11e1e;
+}
+
+#before-load {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  right: 0;
+  bottom: 0;
+  background: #ff3115;
+  z-index: 1000000000000001;
+}
+
+.squere {
+  width: 100px;
+  height: 50px;
+  background: red;
+  border: 3px solid #fff;
+  position: absolute;
+  top: 50%;
+}
+
+.squere .half-squere {
+  background: #c52929;
+  width: 50%;
+  height: 100%;
+}
+
+.squere {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInY;
+  animation-name: flipInY;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes flipInY {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+  }
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+  100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+@keyframes flipInY {
+  0% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    -webkit-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
+  }
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+  100% {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
 }
 /*# sourceMappingURL=style.css.map */
