@@ -294,4 +294,4 @@ $(document).ready(function () {
 
 
 // preloader
-$('#before-load').find('i').fadeOut(4000).end().delay(4000).fadeOut('slow');
+$('#before-load').find('i').fadeOut(3000).end().delay(3000).fadeOut('slow');
